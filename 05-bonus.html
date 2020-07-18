@@ -1,0 +1,15 @@
+<meta charset="utf-8">
+<h1>Calcule o seu Salário final</h1>
+
+<script>
+
+    var nome = prompt('Digite seu nome:')
+    var salarioAtual = parseFloat(prompt('Informe seu salário').replace(',', '.'))
+    var bonus = parseFloat(prompt('Informe o valor do bônus:').replace(',', '.'))
+    var salarioFinal = bonus + salarioAtual
+    document.write(`
+        Olá, ${nome} <br>
+        Seu salário final será: R$ ${salarioFinal.toFixed(2).replace('.', ',')}
+    `)
+
+</script>

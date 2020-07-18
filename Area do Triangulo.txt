@@ -1,0 +1,8 @@
+Crie um algoritmo que calcule a área de triângulos. Utilize a formula abaixo para calcular as áreas:
+
+    area = base x altura / 2
+
+Exiba na tela o resultado do cálculo da seguinte forma:
+
+    A área do triângulo é: X.X
+    

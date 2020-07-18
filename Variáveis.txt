@@ -1,0 +1,15 @@
+Variável: espaço na memória que guarda uma informação
+específica: nome, número, etc.
+
+Sintaxe:
+    var [nome da variável] = [valor da variável]
+
+Regras para nomes de variáveis:
+    1) Pode ter caracteres alfanuméricos: a-zA-Z0-9
+    2) Pode ter os caracteres cifrão ($) ou underscore (_)
+    3) Não pode começar com Número
+
+Estilos de Variáveis:
+    camelCase = nomeCompleto, mediaIdade, isAtivo
+    PascalCase = NomeCompleto, MediaIdade, IsAtivo
+    snake_case = nome_completo, media_idade, is_ativo
