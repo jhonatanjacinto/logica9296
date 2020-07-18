@@ -1,0 +1,6 @@
+Tipos de Dados:
+
+    1) String = Textos (Aspas Duplas, Aspas Simples ou Crase)
+    2) Number = Números
+        a) integer = números inteiros: 11, 88, 3, 12, etc.
+        b) float = números com casas decimais: 11.55, 8.27, etc.
