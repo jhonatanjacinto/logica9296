@@ -1,21 +1,25 @@
 <meta charset="utf-8">
 <h1>Uber vs Carro</h1>
 <h2>Carro</h2>
+
+<script src="javascript/pegaNumero.js"></script>
+<script src="javascript/formataMoeda.js"></script>
+
 <script>
 
-    var distancia = parseFloat(prompt('Informe a distância em KM:').replace(',', '.'))
-    var autonomia = parseFloat(prompt('Quantos KM seu carro faz por litro?').replace(',', '.'))
-    var precoGasolina = parseFloat(prompt('Informe o preço da gasolina:').replace(',', '.'))
-    var precoEstacionamento = parseFloat(prompt('Informe o preço do estacionamento:').replace(',', '.'))
+    var distancia = pegaFloat('Informe a distância em KM:')
+    var autonomia = pegaFloat('Quantos KM seu carro faz por litro?')
+    var precoGasolina = pegaFloat('Informe o preço da gasolina:')
+    var precoEstacionamento = pegaFloat('Informe o preço do estacionamento:')
 
     var gastoGasolina = distancia / autonomia * precoGasolina
     var totalCarro = gastoGasolina + precoEstacionamento
 
     document.write(`
-        Preço da Gasolina: R$ ${precoGasolina.toFixed(2).replace('.', ',')} <br>
-        Valor Gasto com Gasolina: R$ ${gastoGasolina.toFixed(2).replace('.', ',')} <br>
-        Preço do Estacionamento: R$ ${precoEstacionamento.toFixed(2).replace('.', ',')} <br>
-        Total da Viagem com Carro: R$ ${totalCarro.toFixed(2).replace('.', ',')} <br>
+        Preço da Gasolina: ${formataMoeda(precoGasolina)} <br>
+        Valor Gasto com Gasolina: ${formataMoeda(gastoGasolina)} <br>
+        Preço do Estacionamento: ${formataMoeda(precoEstacionamento)} <br>
+        Total da Viagem com Carro: ${formataMoeda(totalCarro)} <br>
     `)
 
 </script>
@@ -35,7 +39,7 @@
 
     var totalUber = gastoTempoViagem + gastoKmRodados + precoBase
     document.write(`
-        Total da Viagem com Uber: R$ ${totalUber.toFixed(2).replace('.', ',')}
+        Total da Viagem com Uber: ${formataMoeda(totalUber)}
     `)
 
 </script>

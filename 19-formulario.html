@@ -1,0 +1,64 @@
+<meta charset="utf-8">
+<h1>Formulário | Academia Caelum</h1>
+<p>
+    Para realizar seu cadastro, preencha o formulário abaixo:
+</p>
+
+Nome: <br>
+<input type="text" id="campoNome">
+<br><br>
+
+Altura: <br>
+<input type="text" id="campoAltura">
+<br><br>
+
+Peso: <br>
+<input type="text" id="campoPeso">
+<br><br>
+
+Data de Nascimento: <br>
+<input type="text" id="campoDataNascimento">
+<br><br>
+
+<button onclick="cadastrar()">
+    Cadastrar
+</button>
+
+<script src="https://unpkg.com/vanilla-masker@1.1.1/build/vanilla-masker.min.js"></script>
+
+<!-- Arquivos do Calendário -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://npmcdn.com/flatpickr/dist/l10n/pt.js"></script>
+
+<script>
+
+    // VMasker(campoDataNascimento).maskPattern('99/99/9999')
+    VMasker(campoAltura).maskPattern('9,99')
+
+    flatpickr(campoDataNascimento, {
+        locale: 'pt',
+        dateFormat: 'd/m/Y'
+    })
+
+    function cadastrar()
+    {
+        var nome = campoNome.value
+        var altura = parseFloat(campoAltura.value.replace(',', '.'))
+        var peso = parseFloat(campoPeso.value.replace(',', '.'))
+        var dataNascimento = campoDataNascimento.value
+        var imc = peso / altura ** 2
+
+        alert('Cadastro realizado com sucesso!')
+
+        document.write(`
+            <h2>Ficha Cadastral</h2>
+            <b>Nome:</b> ${nome} <br>
+            <b>Peso:</b> ${peso} kg<br>
+            <b>Altura:</b> ${altura} m <br>
+            <b>IMC:</b> ${imc.toFixed(1)} <br>
+            <b>Data de Nascimento:</b> ${dataNascimento} <br>
+        `)
+    }
+
+</script>

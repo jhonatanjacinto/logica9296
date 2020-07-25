@@ -1,0 +1,33 @@
+Função: serve para guardar uma lógica inteira em memória para executada quando necessário.
+
+Criação de funções:
+
+    function nomeDaFuncao() 
+    {
+        // códigos que a função executa
+    }
+
+Execução de uma função:
+
+    nomeDaFuncao()
+
+--------------------------------------
+Função com Retorno processa uma informação e devolve (retorna) o resultado
+desse processamento para ser armazenado dentro de uma variável ou utilizado dentro de uma outra função.
+
+Regra básica:
+    Funções de retorno GERALMENTE estão na frente de declarações de variáveis OU dentro da chamada de outras funções.
+
+---------------------------------------
+
+prompt(mensagem) = Com Retorno e Com parâmetro
+parseFloat() = Com Retorno e Com parâmetro
+parseInt() = Com retorno e com parâmetro
+alert() = Com parâmetro
+document.write() = Com parâmetro 
+toFixed() = Com parâmetro e com retorno
+replace() = Com parâmetro e com retorno
+console.log() = Com parâmetro
+getFullYear() = Simples e com retorno
+focus() = Simples
+console.clear() = Simples
