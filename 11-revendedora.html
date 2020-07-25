@@ -1,0 +1,28 @@
+<meta charset="utf-8">
+<h1>Salário - Vendedor de Carros</h1>
+<script>
+
+    var quantidadeCarros = parseInt(prompt('Informe a quantidade de carros vendidos:'))
+    var salarioFixo = parseFloat(prompt('Salário fixo:').replace(',', '.'))
+    var totalVendas = parseFloat(prompt('Total das vendas:').replace(',', '.'))
+    var valorPorCarro = parseFloat(prompt('Informe o valor da comissão por carro:').replace(',', '.'))
+
+    var comissaoTotalVendas = totalVendas * 0.05 // 5% sobre o total das vendas
+    var comissaoTotalCarrosVendidos = valorPorCarro * quantidadeCarros
+
+    var salarioFinal = comissaoTotalCarrosVendidos + salarioFixo + comissaoTotalVendas
+
+    document.write(`
+        Quantidade de Carros vendidos: ${quantidadeCarros} <br>
+        Salário fixo: R$ ${salarioFixo.toFixed(2).replace('.', ',')} <br>
+        Valor total das vendas: R$ ${totalVendas.toFixed(2).replace('.', ',')} <br>
+        Valor por Carro vendido: R$ ${valorPorCarro.toFixed(2).replace('.', ',')} <br><br>
+
+        Total (Comissão 5%): R$ ${comissaoTotalVendas.toFixed(2).replace('.', ',')} <br>
+        Total (Comissão carros vendidos): R$ ${comissaoTotalCarrosVendidos.toFixed(2).replace('.', ',')} <br>
+        Salário Final: R$ ${salarioFinal.toFixed(2).replace('.', ',')}
+    `)
+
+
+
+</script>
