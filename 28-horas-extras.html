@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+<h1>Cálculo | Horas Trabalhadas</h1>
+
+<script src="javascript/formataMoeda.js"></script>
+<script src="javascript/pegaNumero.js"></script>
+
+<script>
+
+    var horasTrabalhadas = pegaInt('Informe as horas trabalhadas:')
+    var valorHora = pegaFloat('Informe o valor da hora trabalhada:')
+
+    if (horasTrabalhadas > 160) {
+        // tem hora extra
+        var valorHoraExtra = valorHora + valorHora * 0.5
+        var horasExtras = horasTrabalhadas - 160
+        var salarioTotal = (160 * valorHora) + (horasExtras * valorHoraExtra)
+    }
+    else {
+        // não tem hora extra
+        var salarioTotal = horasTrabalhadas * valorHora
+    }
+
+    document.write('Seu salário final é: ' + formataMoeda(salarioTotal))
+
+</script>

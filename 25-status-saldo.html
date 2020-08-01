@@ -1,2 +1,22 @@
 <meta charset="utf-8">
 <h1>Status Saldo</h1>
+
+<script src="javascript/pegaNumero.js"></script>
+<script src="javascript/formataMoeda.js"></script>
+<script>
+
+    var saldo = pegaFloat('Informe o valor do saldo:')
+    var debito = pegaFloat('Informe o valor do débito:')
+    var credito = pegaFloat('Informe o valor do crédito:')
+    var saldoAtual = saldo - debito + credito 
+
+    document.write('Saldo Atual: ' + formataMoeda(saldoAtual))
+
+    if (saldoAtual < 0) {
+        document.write('<br>Saldo Negativo')
+    }
+    else {
+        document.write('<br>Saldo Positivo')
+    }
+
+</script>
