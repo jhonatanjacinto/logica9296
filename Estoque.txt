@@ -4,4 +4,4 @@ Calcule a quantidade média e exiba: a quantidade atual e a média.
 Em seguida, verifique: se a quantidade atual em estoque for maior ou igual a quantidade média mostre a mensagem 'Não efetuar compra', caso contrário exiba a mensagem 'Efetuar compra'.
 
     FÓRMULA:
-        quantidade média = (quantidade máxima + quantidade mínima) / 2
+        quantidade média = (qtd máxima + qtd mínima) / 2

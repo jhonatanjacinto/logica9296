@@ -1,0 +1,26 @@
+<meta charset="utf-8">
+<h1>Aprovação / Reprovação</h1>
+
+<script src="javascript/pegaNumero.js"></script>
+<script>
+
+    var nota1 = pegaFloat('Informe a 1ª nota:')
+    var nota2 = pegaFloat('Informe a 2ª nota:')
+    var media = (nota1 + nota2) / 2
+
+    if (media < 6) 
+    {
+        document.write(`
+            Sua média foi: ${media.toFixed(1)} <br>
+            <b>Você está REPROVADO!</b>
+        `)
+    }
+    else 
+    {
+        document.write(`
+            Sua média foi: ${media.toFixed(1)} <br>
+            <b>Você está APROVADO!</b>
+        `)
+    }
+
+</script>

@@ -1,0 +1,42 @@
+<meta charset="utf-8">
+<h1>Estoque</h1>
+
+Quantidade Atual: <br>
+<input type="text" id="campoQtdAtual">
+<br><br>
+
+Quantidade Mínima: <br>
+<input type="text" id="campoQtdMinima">
+<br><br>
+
+Quantidade Máxima: <br>
+<input type="text" id="campoQtdMaxima">
+<br><br>
+
+<button onclick="verificar()">
+    Verificar Estoque
+</button>
+
+<script>
+
+    function verificar()
+    {
+        var qtd_atual = parseInt(campoQtdAtual.value)
+        var qtd_min = parseInt(campoQtdMinima.value)
+        var qtd_max = parseInt(campoQtdMaxima.value)
+        var qtd_media = (qtd_min + qtd_max) / 2
+
+        document.write(`
+            Quantidade Atual: ${qtd_atual} <br>
+            Quantidade Média: ${qtd_media} <br><br>
+        `)
+
+        if (qtd_atual >= qtd_media) {
+            document.write('Não efetuar compra!')
+        }
+        else {
+            document.write('Efetuar compra!')
+        }
+    }
+
+</script>
