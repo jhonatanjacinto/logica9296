@@ -6,7 +6,7 @@ function pegaFloat(mensagem)
 
 
 // pede números inteiros para o usuário
-function pegaInt()
+function pegaInt(mensagem)
 {
     return parseInt(prompt(mensagem).replace(',', '.'))
 }

@@ -1,0 +1,26 @@
+1) Pedir a idade do usuário (X)
+2) SE idade estiver entre 12-17 anos, exibir "Seu plano é o TEEN" (X)
+3) SE idade estiver entre 18-29 anos, exibir "Seu plano é o PROFESSIONAL"
+4) SE idade for 30+ anos, exibir "Seu plano é o XPERIENCE"
+5) CASO CONTRÁRIO exibir "Não há planos para você"
+
+--------------------------------------------------------------
+
+OPERADORES DE COMPARAÇÃO
+
+== (igualdade)
+=== (igualdade restritiva)
+!= (diferença)
+!== (diferença restritiva)
+> (maior que)
+< (menor que)
+>= (maior ou igual a)
+<= (menor ou igual a)
+
+OPERADORES LÓGICOS
+
+&& (E)
+|| (OU)
+! (NÃO)
+
+ELSE SÓ NEGA O IF IMEDIATAMENTE ANTERIOR A ELE
