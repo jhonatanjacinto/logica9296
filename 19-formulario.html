@@ -20,6 +20,9 @@ Data de Nascimento: <br>
 <input type="text" id="campoDataNascimento">
 <br><br>
 
+<input type="checkbox" id="campoSouCardiaco"> Tenho problemas cardíacos
+<br><br>
+
 <button onclick="cadastrar()">
     Cadastrar
 </button>
@@ -30,6 +33,7 @@ Data de Nascimento: <br>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script src="https://npmcdn.com/flatpickr/dist/l10n/pt.js"></script>
+<script src="javascript/libIdade.js"></script>
 
 <script>
 
@@ -47,7 +51,17 @@ Data de Nascimento: <br>
         var altura = parseFloat(campoAltura.value.replace(',', '.'))
         var peso = parseFloat(campoPeso.value.replace(',', '.'))
         var dataNascimento = campoDataNascimento.value
+        var souCardiaco = campoSouCardiaco.checked
         var imc = peso / altura ** 2
+        var dataPedacos = dataNascimento.split('/')
+        var idade = calculaIdade( dataPedacos[0], dataPedacos[1], dataPedacos[2] )
+
+        if (idade < 14 || souCardiaco == true) {
+            var frase = "PRECISA DE ACOMPANHAMENTO MÉDICO"
+        }
+        else {
+            var frase = "NÃO PRECISA DE ACOMPANHAMENTO MÉDICO"
+        }
 
         alert('Cadastro realizado com sucesso!')
 
@@ -58,6 +72,8 @@ Data de Nascimento: <br>
             <b>Altura:</b> ${altura} m <br>
             <b>IMC:</b> ${imc.toFixed(1)} <br>
             <b>Data de Nascimento:</b> ${dataNascimento} <br>
+            <b>Idade:</b> ${idade} anos <br>
+            ${frase}
         `)
     }
 
