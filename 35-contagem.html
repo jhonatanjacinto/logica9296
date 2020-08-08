@@ -1,0 +1,21 @@
+<meta charset="utf-8">
+<h1>Contagem</h1>
+<script>
+
+    var numero = parseInt(prompt('Informe um número:'))
+
+    while (numero <= 0) 
+    {
+        numero = parseInt(prompt('Por favor, informe um número maior que 0:'))
+    }
+
+    document.write('Contando...<br>')
+
+    for (var contador = 1; contador <= numero; contador += 1)
+    {
+        document.write(contador + '...<br>')
+    }
+
+    document.write('FIM!!!')
+
+</script>

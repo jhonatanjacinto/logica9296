@@ -1,0 +1,16 @@
+Escreva um algoritmo que peça 7 números pro usuário e calcule quantos deles são pares
+e quantos são ímpares.
+
+Ex: 
+    numeros informados: 6, 9, 7, 5, 23, 4, 2
+
+    Exibir:
+        Impares = 4
+        Pares = 3
+
+    ------------------
+
+    SE O RESTO DA DIVISÃO DE UM NÚMERO FOR ZERO
+        ELE É PAR 
+    CASO CONTRÁRIO
+        ELE É IMPAR
