@@ -1,5 +1,36 @@
 <meta charset="utf-8">
 <h1>Jogo de Advinhação</h1>
-<button>
+<button onclick="jogar()">
     Jogar
 </button>
+
+<script src="javascript/pegaNumero.js"></script>
+<script src="javascript/pegaNumeroAleatorio.js"></script>
+<script src="javascript/mostra.js"></script>
+<script>
+
+    function jogar()
+    {
+        var numeroAleatorio = pegaNumeroAleatorio(0, 10)
+        var chute = pegaInt('Informe um chute:')
+        var chutesInvalidos = 0
+
+        while (chute > 10 || chute < 0 || isNaN(chute)) 
+        {
+            chutesInvalidos++
+            if (chutesInvalidos == 3) {
+                alert('Game Over!')
+                break // força um looping a parar de executar
+            }
+            chute = pegaInt('Chute inválido! Por favor, informe um número entre 0-10:')
+        }
+
+        if (chute == numeroAleatorio) {
+            mostra(`Parabéns, você acertou! O número sorteado foi: ${numeroAleatorio}`)
+        }
+        else {
+            mostra(`Que pena, você errou. O número sorteado era: ${numeroAleatorio}`)
+        }
+    }
+
+</script>
